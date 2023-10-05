@@ -33,5 +33,3 @@
 // document.write(fullName);
 
 // !Question7
-
-
