@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="chapter 49.js"></script>
+</head>
+<body>
+
+    <h2>Signup Form</h2>
+
+    <form id="myForm">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Form Data:</h2>
+
+    <p id="formData"></p>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault(); // To prevent form from being submitted
+
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var pwd = document.getElementById("pwd").value;
+
+            document.getElementById("formData").innerHTML = "First Name: " + fname + "<br>Last Name: " + lname + "<br>Email: " + email + "<br>Password: " + pwd;
+        });
+    </script>
+
+    <h2>Item Details</h2>
+
+    <div id="itemDetail">
+        <p>Item Description: <span class="show-more">This is the main part of the description. You can see it only on clicking 'Read more'</span></p>
+        <button class="read-more">Read more</button>
+    </div>
+
+</body>
+</html>
